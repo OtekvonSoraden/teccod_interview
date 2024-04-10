@@ -1,4 +1,4 @@
-from teccod_interview import (task1, task2, task4, Point)
+from teccod_test_tasks import (task1, task2, task4, Point)
 
 
 def test_task1():
@@ -23,6 +23,9 @@ def test_task3():
     assert point_b.set_coords(110, 100) is True
     assert point_a.dist_to_point(point_b) == 10
     assert str(point_a) == "Pt_A: X=100 Y=100"
+    assert point_a.set_coords(-100, -100) is True
+    assert point_b.set_coords(-110, -110) is True
+    assert point_a.dist_to_point(point_b) == 10*2**0.5
 
 
 def test_task4():

@@ -23,7 +23,7 @@ def task2(min, max):
         if erat_sieve[p]:
             if p >= min:
                 primes.append(p)
-            for i in range(p * p, max, p):
+            for i in range(p**2, max, p):
                 erat_sieve[i] = False
 
     print(primes)
