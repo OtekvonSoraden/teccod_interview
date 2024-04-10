@@ -26,11 +26,12 @@ def test_task3():
     assert point_a.set_coords(-100, -100) is True
     assert point_b.set_coords(-110, -110) is True
     assert point_a.dist_to_point(point_b) == 10*2**0.5
+    assert point_a.set_coords(-100.1, 100.2) is True
+    assert point_b.set_coords(-110.1, 110.2) is True
+    assert point_a.dist_to_point(point_b) == 10*2**0.5
 
 
 def test_task4():
-    print(task4(['abc', 'ab', 'abcdef', 'a']))
-    print(task4(['abc', 'ab', 'abcdef', 'a'], False))
     assert task4(['abc', 'ab', 'abcdef', 'a']) == ['a', 'ab', 'abc', 'abcdef']
     assert task4(['abc', 'ab', 'abcdef', 'a'], False) == [
         'abcdef', 'abc', 'ab', 'a']
